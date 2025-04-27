@@ -1,0 +1,27 @@
+{
+    "cityes":[
+        
+        {
+            "name":"Kazan",
+            "population": 3000000
+        },
+        {
+            "name":"Elabuga",
+            "population" : 60000
+        },
+        {
+            "name":"Almetevsk",
+            "population": 20000
+        },
+        
+        {
+            "name":"Moscow",
+            "population": 10000000
+        },
+        {
+            "name":"Nizhnekamsck",
+            "population": 150000
+        }
+    ]
+
+}
