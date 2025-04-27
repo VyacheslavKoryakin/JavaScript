@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: aqua;
+}
+
+body{
+    display: flex;
+    grid-template-columns: 1fr;
+    grid-column: 1fr;
+    column-width: 80%;
+    margin: 20px 20px 20px 0;
+    
+}
+div{
+    
+    margin-left: 10px;
+    
+}
+div label{
+    display: block;
+  
+}
+label{
+    text-align: center;
+}
+.list{
+    display: flex;
+}
+.list textarea{
+    background-color: rgb(111, 225, 115);
+    display: block;
+    gap:5px;
+}
+.list textarea:nth-child(3){
+    margin-bottom: 10px;
+}
+.list #name{
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+.list #preview{
+   
+    height:max-content;
+    text-align: center;
+    font-size: 18px;
+}
+.list #price{
+    height: 20px;
+    text-align: center;
+    font-size: 18px;
+}
