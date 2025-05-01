@@ -1,23 +1,62 @@
 
 //1
 
-let  number =8;
-if(typeof(number)=="number"){
-if(number%2==0){
-    console.log(`Число ${number} является четным`)
-}else{
-console.log(`Число ${number} является нечетным`)
-}
-}else{
-    console.log(`Ошибка ${number} не является числом`)
-}
+document.addEventListener('DOMContentLoaded',function(parameters) {
+    document.addEventListener('mousemove', function (e) {
+        console.log('mouse coordinate', e.pageX, e.pageY)
+        if( e.pageX> 1900 && e.pageY<20){
+            alert("не покидайте страницу так рано")
+        }
 
+    })
+})
 
 
 //2
+let num1 = document.querySelector('#num1')
+let symbol = document.querySelector('#symbol')
+let num2 = document.querySelector('#num2')
+let result;
+document.addEventListener('DOMContentLoaded', function (e) {
 
-let valute = prompt('введите сумму долларах');
-let courseDollarRubl=85;
-let result = valute*courseDollarRubl;
 
-alert(`Сумма в рублях равна  ${result} р.`)
+    num1.addEventListener('change', function (e) {
+
+
+        console.log(e.target.value)
+    })
+    num2.addEventListener('change', function (e) {
+
+
+        console.log(e.target.value)
+    })
+
+    symbol.addEventListener('change', function (e) {
+
+
+        console.log(e.target.value)
+    
+
+    switch (e.target.value) {
+        case "+":
+            result = (+num1.value) +(+ num2.value)
+            break;
+        case "-":
+            result = (+num1.value) +(+ num2.value)
+            break;
+        case "*":
+            result = (+num1.value) *(+ num2.value)
+            break;
+        case "/":
+           result = (+num1.value) /(+ num2.value)
+            break;
+        default:
+            break;
+    }
+    console.log(num1.value,  symbol.value, num2.value+ "=" + result );
+
+})
+
+
+
+})
