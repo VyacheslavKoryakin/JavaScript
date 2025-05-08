@@ -1,23 +1,36 @@
 
-//1
+document.getElementById('addBlockButton').addEventListener('click', () => {
+        const colorBlockContainer = document.getElementById('color-block-container');
+        const block = document.createElement('div');
+        block.className = 'block';
 
-let  number =8;
-if(typeof(number)=="number"){
-if(number%2==0){
-    console.log(`Число ${number} является четным`)
-}else{
-console.log(`Число ${number} является нечетным`)
+        const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        block.style.backgroundColor = randomColor;
+
+        block.addEventListener('click', () => {
+                block.remove();
+        });
+
+        colorBlockContainer.appendChild(block);
+});
+
+function changeColor() {
+        const colorBlock = document.getElementById('colorBlock');
+        const colorPicker = document.getElementById('colorPicker');
+        colorBlock.style.backgroundColor = colorPicker.value;
 }
-}else{
-    console.log(`Ошибка ${number} не является числом`)
+
+function validatePassword() {
+        const password = document.getElementById('password').value;
+        const message = document.getElementById('passwordMessage');
+
+        const isValid = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password);
+
+        if (isValid) {
+                alert('Пароль корректный!');
+                message.style.color = "green";
+        } else {
+                alert('Пароль некорректный!');
+                message.style.color = "red";
+        }
 }
-
-
-
-//2
-
-let valute = prompt('введите сумму долларах');
-let courseDollarRubl=85;
-let result = valute*courseDollarRubl;
-
-alert(`Сумма в рублях равна  ${result} р.`)
