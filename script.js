@@ -1,23 +1,17 @@
+const colors = ['#DDE1E4', '#85CB33', '#788CA5', '#3BA2E3', '#D4ADCF', '#E4CC37'];
+const palette = document.getElementById('colors');
+const text = document.getElementById('text');
 
-//1
+colors.forEach((color) => {
+        const colorBlock = document.createElement('div');
+        colorBlock.className = 'colorBlock';
+        colorBlock.style.backgroundColor = color;
+        colorBlock.setAttribute('data-color', color);
 
-let  number =8;
-if(typeof(number)=="number"){
-if(number%2==0){
-    console.log(`Число ${number} является четным`)
-}else{
-console.log(`Число ${number} является нечетным`)
-}
-}else{
-    console.log(`Ошибка ${number} не является числом`)
-}
+        colorBlock.addEventListener('click', () => {
+                const selectedColor = colorBlock.dataset.color;
+                text.style.color = selectedColor;
+        });
 
-
-
-//2
-
-let valute = prompt('введите сумму долларах');
-let courseDollarRubl=85;
-let result = valute*courseDollarRubl;
-
-alert(`Сумма в рублях равна  ${result} р.`)
+        palette.appendChild(colorBlock);
+});
