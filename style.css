@@ -1,0 +1,46 @@
+*{
+   
+    font-family: Segoe UI;
+}
+
+h2 {
+  
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.post p {
+  
+    font-size: 24px;
+    margin-left: 35px;
+    padding-bottom: 20px;
+}
+
+
+
+input {
+   
+    width: 20vw;
+    height: 4vh;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+textarea {
+   
+    width: 30vw;
+    height: 10vh;
+    border-radius: 4px;
+  
+    margin-top: 60px;
+}
+
+button {
+
+ 
+    border-radius: 4px;
+    width: 8vw;
+    height: 4vh;
+    margin-top: 60px;
+    margin-left: 30px;
+}

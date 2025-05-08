@@ -1,23 +1,15 @@
+document.getElementById('commentForm').addEventListener('submit', function (event) {
+    event.preventDefault();
 
-//1
+    const name = document.getElementById('name').value;
+    const comment = document.getElementById('comment').value;
+    const date = new Date().toLocaleString();
 
-let  number =8;
-if(typeof(number)=="number"){
-if(number%2==0){
-    console.log(`Число ${number} является четным`)
-}else{
-console.log(`Число ${number} является нечетным`)
-}
-}else{
-    console.log(`Ошибка ${number} не является числом`)
-}
+    const commentDiv = document.createElement('div');
+    commentDiv.className = 'comment';
+    commentDiv.innerHTML = `<strong>${name}:</strong> <p>${comment} <i>(${date})</i></p>`;
 
+    document.querySelector('.comments').appendChild(commentDiv);
 
-
-//2
-
-let valute = prompt('введите сумму долларах');
-let courseDollarRubl=85;
-let result = valute*courseDollarRubl;
-
-alert(`Сумма в рублях равна  ${result} р.`)
+    document.getElementById('commentForm').reset();
+});
